@@ -118,3 +118,39 @@ nav .nav_left li:hover a span{
     text-align: center;
     line-height: 38px;
 }
+.nav_wrap .seach{
+    width: 90px;
+    height: 100%;
+    text-align: center;
+    line-height: 54px;
+    float: left;
+    font-size: 13px;
+}
+.nav_wrap .shopping{
+    width: 80px;
+    height: 100%;
+    float: left;
+    font-size: 13px;
+    text-align: center;
+    line-height: 54px;
+    margin-left: 16px;
+    margin-right: 4px;
+    position: relative;
+}
+.nav_wrap .shopping .shopping-car-amount{
+    display: none;
+    position: absolute;
+    color: red;
+    top: -7px;
+    right: 3px;
+}
+.nav_wrap .login{
+    width: 50px;
+    padding-left: 12px;
+    padding-right: 4px;
+    height: 54px;
+    float: left;
+    line-height: 54px;
+    text-align: center;
+    font-size: 14px;
+}
