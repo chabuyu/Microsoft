@@ -70,7 +70,7 @@
                         font-weight: 600;
 
                         &:hover {
-                            border-bottom: 2px solid #000000;
+                                border-bottom: 2px solid #0067b8;
                         }
                     }
                 }
@@ -116,7 +116,7 @@
                 position: absolute;
                 z-index: 1;
                 max-width: 520px;
-                width: 410px;
+                width: 426px;
                 height: 160px;
                 top: 120px;
                 top: calc(50%);
@@ -152,7 +152,6 @@
                     padding-top: 12px;
 
                     a {
-                        font-size: 15px;
                         padding: 10px 20px 6px 22px;
                         position: relative;
                         border: 2px solid transparent;
@@ -172,14 +171,14 @@
                         transition: all 200ms ease-in-out;
                         box-shadow: 0 4px 8px 0 transparent;
                         background-color: #181818;
-                        span{
-                            width: 20px;
 
-                            &:hover{
-                                border-bottom: 2px solid #fff;
-                                transition: all 200ms ease-in-out;
-                                margin-left: -10px;
-                            }
+                        span {
+                            width: 20px;
+                        }
+                        &:hover span{
+                            border-bottom: 2px solid #fff;
+                            transition: all 200ms ease-in-out;
+                            margin-left: -8px;
                         }
                     }
                 }
@@ -189,10 +188,132 @@
 }
 
 
-
-
 //banner下面的第二个产品图
+.primary_two {
+    width: 100%;
+    height: 460px;
 
+    .primary_two_wrap {
+        width: 1600px;
+        height: 100%;
+        margin: 0 auto;
 
+        .primary_two_top {
+            width: 100%;
+            height: 80px;
+            padding-top: 48px;
+        }
+
+        .primary_max {
+            width: 100%;
+            height: 411px;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                width: 382px;
+                height: 100%;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 382px;
+                        height: 214px;
+                    }
+
+                    h3 {
+                        font-size: 20px;
+                        line-height: 24px;
+                        font-weight: 600;
+                        opacity: .95;
+                        padding-top: 1px;
+                        padding-bottom: 2px;
+                        margin-top: 37px;
+                        padding-right: 12px;
+                    }
+
+                    .primary_max_title {
+                        padding-right: 12px;
+                        padding-top: 2px;
+                        display: block;
+                        margin-inline-start: 0px;
+                        margin-inline-end: 0px;
+                    }
+
+                    .primary_max_buy {
+                        padding: 10px 3px 7px 0;
+                        position: relative;
+                        border: 2px solid transparent;
+                        outline: 1px solid transparent;
+                        outline-offset: -3px;
+                        margin-left: 0;
+                        color: #0067b8;
+                        background: transparent;
+                        transition: none;
+                        white-space: normal;
+                        text-align: left;
+
+                        span {
+                            max-width: 100%;
+                            display: inline-block;
+                            position: relative;
+                            left: 0;
+                            text-overflow: clip;
+                            overflow: hidden;
+                            transition: all 200ms ease-in-out;
+                            vertical-align: top;
+                            line-height: 18.5px;
+                            font-weight: 600;
+
+                            &:hover {
+                                border-bottom: 2px solid #0067b8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 //第二幅大图
+.max_primary .max_primary_wrap .max_primary_xbox .max_primary_box .max_primary_two{
+    font-weight: 600;
+    letter-spacing: -.01em;
+    box-sizing: content-box;
+    max-height: 112px;
+    background: none;
+    font-family: 'Segoe UI',SegoeUI,'Microsoft YaHei',微软雅黑,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+.about_Microsoft{
+    width: 100%;
+    height: 80px;
+    .about_Microsoft_wrap{
+        width: 1600px;
+        height: 80px;
+        padding-top: 48px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        div{
+            float: left;
+            padding-right: 12px;
+            margin-bottom: 4px;
+        }
+        ul{
+            display:flex;
+
+            li{
+                width: 44px;
+                height: 32px;
+                img{
+                    width: 28px;height: 28px;
+                }
+            }
+        }
+    }
+}
