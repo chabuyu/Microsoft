@@ -1,0 +1,120 @@
+@import"./style.scss";
+
+.register_wrap {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(../../../images/register.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    .register {
+        width: 440px;
+        height: 340px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0.9;
+        .register_box {
+            width: 352px;
+            height: 252px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: none;
+            img {
+                width: 108px;
+                height: 24px;
+            }
+
+            h3 {
+                color: #404040;
+                font-size: 1.5rem;
+                font-weight: 600;
+                padding: 0;
+                margin-top: 20px;
+                margin-bottom: 12px;
+            }
+
+            .email {
+                width: 352px;
+                height: 52px;
+
+                input {
+                    width: 338px;
+                    height: 36px;
+                    padding: 6px 0px;
+                    padding-right: 10px;
+                    outline: none;
+                    border-bottom: 1px solid #000;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    border-right-width: 0;
+                    padding-left: 0;
+                    direction: ltr;
+                    display: block;
+                    width: 100%;
+                    background-image: none;
+                    max-width: 100%;
+                    line-height: inherit;
+                }
+            }
+
+            .register_change {
+                width: 352px;
+                height: 36px;
+                padding-bottom: 16px;
+                a{
+                color: rgb(27, 24, 228);
+                }
+            }
+
+            .register_next {
+                width: 352px;
+                height: 44px;
+                padding-top: 24px;
+                a{
+                    float: right;
+                    display: inline-block;
+                    width: 108px;
+                    height: 32px;
+                    background: rgb(16, 126, 216);
+                    color: #fff;
+                    text-align: center;
+                    line-height: 32px;
+                }
+            }
+        }
+        .register_box2{
+            width: 352px;
+            height: 252px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            img {
+                width: 108px;
+                height: 24px;
+            }
+
+            h3 {
+                color: #404040;
+                font-size: 1.5rem;
+                font-weight: 600;
+                padding: 0;
+                margin-top: 20px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
