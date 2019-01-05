@@ -20,101 +20,169 @@
         bottom: 0;
         margin: auto;
         opacity: 0.9;
+        padding: 44px;
+
         .register_box {
             width: 352px;
             height: 252px;
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            display: none;
+            // display: none;
+
             img {
                 width: 108px;
                 height: 24px;
-            }
-
-            h3 {
-                color: #404040;
-                font-size: 1.5rem;
-                font-weight: 600;
-                padding: 0;
-                margin-top: 20px;
-                margin-bottom: 12px;
-            }
-
-            .email {
-                width: 352px;
-                height: 52px;
-
-                input {
-                    width: 338px;
-                    height: 36px;
-                    padding: 6px 0px;
-                    padding-right: 10px;
-                    outline: none;
-                    border-bottom: 1px solid #000;
-                    border-top-width: 0;
-                    border-left-width: 0;
-                    border-right-width: 0;
-                    padding-left: 0;
-                    direction: ltr;
-                    display: block;
-                    width: 100%;
-                    background-image: none;
-                    max-width: 100%;
-                    line-height: inherit;
-                }
             }
 
             .register_change {
                 width: 352px;
                 height: 36px;
                 padding-bottom: 16px;
-                a{
-                color: rgb(27, 24, 228);
-                }
-            }
 
-            .register_next {
-                width: 352px;
-                height: 44px;
-                padding-top: 24px;
-                a{
-                    float: right;
-                    display: inline-block;
-                    width: 108px;
-                    height: 32px;
-                    background: rgb(16, 126, 216);
-                    color: #fff;
-                    text-align: center;
-                    line-height: 32px;
+                a {
+                    color: rgb(27, 24, 228);
                 }
             }
         }
-        .register_box2{
+
+        .register_box2 {
             width: 352px;
             height: 252px;
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
+            display: none;
             img {
                 width: 108px;
                 height: 24px;
             }
 
-            h3 {
-                color: #404040;
-                font-size: 1.5rem;
-                font-weight: 600;
+            .register_prev_wrap {
+                width: 352px;
+                height: 24px;
+                background: #fff;
+                margin-top: 16px;
+                margin-bottom: -4px;
+
+                .register_prev {
+                    width: 24px;
+                    height: 24px;
+                    float: left;
+                    background-image: url(../../../images/register_prev.svg);
+
+                    &:hover {
+                        border-radius: 50%;
+                        background-color: #ccc;
+                        opacity: 0.8;
+                    }
+                }
+
+                span {
+                    display: block;
+                    float: left;
+                    width: 324px;
+                    height: 24px;
+                }
+            }
+
+            .register_input {
                 padding: 0;
-                margin-top: 20px;
+                margin-top: 16px;
                 margin-bottom: 12px;
+                font-size: 14px;
+            }
+
+            .login_check {
+                color: #262626;
+                text-align: left;
+                width: 352px;
+                height: 20px;
+                margin-bottom: 16px;
+                line-height: 20px;
+
+                input {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    float: left;
+                }
+
+                span {
+                    color: #262626;
+                    text-align: left;
+                    direction: ltr;
+                    font-weight: 400;
+                    font-size: .9375rem;
+                    line-height: 1.25rem;
+                    cursor: pointer;
+                    line-height: 20px;
+                    float: left;
+                }
+            }
+
+            .login_forget {
+                margin-bottom: 16px;
+                display: block;
+                font-size: .8125rem;
+                text-align: left;
+
+                a {
+                    color: #2d66bb;
+                }
             }
         }
     }
+}
+
+//按钮 下一步 复用
+
+.register_next {
+    width: 352px;
+    height: 44px;
+    padding-top: 4px;
+
+    a {
+        float: right;
+        display: block;
+        width: 108px;
+        height: 32px;
+        background: rgb(16, 126, 216);
+        color: #fff;
+        text-align: center;
+        line-height: 32px;
+    }
+}
+
+//注册 email password 复用
+
+.register_email,
+.register_password {
+    width: 352px;
+    height: 52px;
+
+    input {
+        width: 338px;
+        height: 36px;
+        padding: 6px 0px;
+        padding-right: 10px;
+        outline: none;
+        border-bottom: 1px solid #000;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        padding-left: 0;
+        direction: ltr;
+        display: block;
+        width: 100%;
+        background-image: none;
+        max-width: 100%;
+        line-height: inherit;
+    }
+}
+
+//h3 的复用
+.register_h3 {
+    color: #404040;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 12px;
 }

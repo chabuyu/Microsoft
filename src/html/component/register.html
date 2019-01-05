@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>注册</title>
     <link rel="stylesheet" href="../../css/component/register.css">
+    <script type="text/javascript" src="/libs/require/require.js" data-main="/js/component/register.js"></script>
 </head>
 
 <body>
@@ -14,9 +15,9 @@
         <div class="register">
             <div class="register_box">
                 <img src="../../images/logo.png" alt="">
-                <h3>创建账户</h3>
-                <div class="email">
-                    <input type="text" placeholder="someone@example.com">
+                <h3 class="register_h3">创建账户</h3>
+                <div class="register_email">
+                    <input type="text" placeholder="someone@example.com" id="register_email">
                 </div>
                 <div class="register_change">
                     <a href="">改为使用电话号码</a>
@@ -25,20 +26,20 @@
                     <a href="">获取新的电子邮件地址</a>
                 </div>
                 <div class="register_next">
-                    <a href="">下一步</a>
+                    <a href="" id="register_next">下一步</a>
                 </div>
             </div>
             <div class="register_box2">
                 <img src="../../images/logo.png" alt="">
-                <div>
+                <div class="register_prev_wrap">
                     <div class="register_prev">
 
                     </div>
                     <span></span>
                 </div>
-                <h3>创建密码</h3>
-                <div>输入想为帐户使用的密码。</div>
-                <div class="password">
+                <h3 class="register_h3">创建密码</h3>
+                <div class="register_input">输入想为帐户使用的密码。</div>
+                <div class="register_password">
                     <input type="text" placeholder="创建密码">
                 </div>
                 <div class="register_next">
