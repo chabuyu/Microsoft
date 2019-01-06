@@ -32,7 +32,16 @@
                 width: 108px;
                 height: 24px;
             }
-
+            .register_wramming{
+                display: none;
+                margin-top: -10px;
+                width: 100%;
+                color: #e81123;
+                position: relative;
+                min-height: 1px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
             .register_change {
                 width: 352px;
                 height: 36px;
@@ -138,7 +147,7 @@
     height: 44px;
     padding-top: 4px;
 
-    a {
+    button {
         float: right;
         display: block;
         width: 108px;
