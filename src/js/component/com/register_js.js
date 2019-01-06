@@ -1,4 +1,4 @@
-define(["jquery"], () => {
+define(["jquery", "cookie"], () => {
     class Register {
         constructor() {
             this.init();
@@ -28,20 +28,50 @@ define(["jquery"], () => {
                                     success: function (res) {
                                         console.log(res);
                                         console.log(res.res_code);
-                                        if(!res.res_code){
+                                        if (res.res_code) {
+                                            $("#register_box").hide();
+                                            $("#register_box2").show();
+                                            $("#register_password_btn").on("click", function (e) {
+                                                e.preventDefault();
+                                                let password = $("#register_password").val();
+                                                console.log(password);
+                                                if (password) {
+                                                    $.ajax({
+                                                        type: "post",
+                                                        url: "http://localhost/www/api/v1/register_into.php",
+                                                        data: {
+                                                            email: email,
+                                                            password: password
+                                                        },
+                                                        success: function (re) {
+                                                            console.log(re);
+                                                            $.cookie("Microsoft", email, {
+                                                                expires: 30,
+                                                                path: '/'
+                                                            });
+
+                                                            location.href = "http://localhost:2000/html/component/login.html"
+                                                        },
+                                                        error: function (er) {
+                                                            console.log(er);
+                                                        },
+                                                        dataType: "json"
+                                                    })
+                                                } else {
+
+                                                }
+                                            })
+                                        } else {
                                             $("#register_wramming").show().text("电子邮件地址已使用。");
-                                        }else{
-                                            
                                         }
-                                        // $("#register_box").hide();
-                                        // $("#register_box2").show();
+
                                     },
                                     error: function (err) {
                                         console.log(err);
                                     },
                                     dataType: "json"
                                 })
-                                
+
                             })
                         }
                     } else {
