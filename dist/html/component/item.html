@@ -1,0 +1,10 @@
+<ul><script type="text/html" id="list_template">{{each list item i}}  
+            <li class="list_apply">
+                <div class="img">
+                    <a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img }}"></a>
+                </div>
+                <p class="title">{{ item.title }}</p>
+                <p class="price">￥ {{ item.price }}</p>
+            
+            </li>
+        {{/each}}</script></ul>

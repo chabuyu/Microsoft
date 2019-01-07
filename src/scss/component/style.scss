@@ -40,3 +40,10 @@ textarea {
     resize: none;
     overflow: auto;
 }
+.wrap{
+    width: 100%;
+    .main_wrap{
+        width: 84%;
+        margin: 0 auto;
+    }
+}

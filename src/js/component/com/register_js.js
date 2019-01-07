@@ -45,11 +45,7 @@ define(["jquery", "cookie"], () => {
                                                         },
                                                         success: function (re) {
                                                             console.log(re);
-                                                            $.cookie("Microsoft", email, {
-                                                                expires: 30,
-                                                                path: '/'
-                                                            });
-
+                                                            $.cookie("Microsoft", email)
                                                             location.href = "http://localhost:2000/html/component/login.html"
                                                         },
                                                         error: function (er) {

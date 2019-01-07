@@ -1,4 +1,4 @@
-define(["jquery"], () => {
+define(["jquery","cookie"], () => {
 	class Header{
 		constructor(){
 			this.init();
@@ -10,7 +10,13 @@ define(["jquery"], () => {
 					resolve();
 				})
 			}).then(() => {
-				
+				console.log(1);
+				var ccc = $.cookie("Microsoft");
+				console.log(ccc);
+				if(ccc){
+					$("#login_one").hide();
+					$("#login_user").show().text(ccc);
+				}
 			})
 		}
 	}

@@ -1,0 +1,148 @@
+@import "./component/style.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+
+.list_top {
+    height: 795px;
+    background: #ccc;
+
+    .list_new_phone {
+        height: 100%;
+
+        .m-banner {
+            width: 100%;
+            height: 162px;
+            padding-top: 48px;
+
+            .c-heading-3 {
+                font-weight: 600;
+                font-size: 34px;
+                line-height: 40px;
+                text-align: center;
+            }
+
+            .c-paragraph-1 {
+                padding: 24px 0 24px;
+                font-weight: 200;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+
+        .m_banner_bottom {
+            width: 100%;
+            height: 585px;
+            margin-top: 48px;
+            position: relative;
+
+            .list_new_phone_l {
+                padding-left: 36px;
+                padding-right: 36px;
+                position: absolute;
+                top: calc(50%);
+                transform: translateY(-50%);
+                text-align: left;
+                width: 35%;
+                left: 0;
+                height: 214px;
+
+                h2 {
+                    font-size: 34px;
+                    line-height: 40px;
+                    padding: 20px 0 2px;
+                    font-weight: 600;
+                }
+
+                div {
+                    padding-top: 12px;
+                    font-size: 15px;
+                    line-height: 20px;
+                    padding: 12px 0 0;
+                    font-weight: 400;
+
+                    .list_top_one {}
+
+                    .list_top_two {
+                        margin-top: 20px;
+                        font-weight: 600;
+                        font-size: .8em;
+                    }
+                }
+            }
+
+            .list_new_phone_r {
+                float: right;
+                width: 1040px;
+                height: 585px;
+
+                img {
+                    width: 1040px;
+                    height: 585px;
+                }
+            }
+        }
+    }
+}
+
+.list {
+    height: 951px;
+
+    .list_wrap {
+        height: 100%;
+
+        .list_apply_wrap {
+            height: 380px;
+            width: 100%;
+
+            h2 {
+                height: 72px;
+                width: 100%;
+                padding-top: 36px;
+                padding-bottom: 4px;
+                font-size: 24px;
+                line-height: 28px;
+                font-weight: 600;
+                span {
+                    float: right;
+                    line-height: 50px;
+                    font-size: 14px;
+                }
+            }
+            .list_apply_main {
+                height: 296px;
+                padding-top: 12px;
+                overflow: hidden;
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    .list_apply {
+                        width: 150px;
+                        height: 224px;
+                        margin-right: 18px;
+
+                        .img {
+                            width: 124px;
+                            height: 124px;
+                        }
+
+                        .title {
+                            width: 126px;
+                            height: 58px;
+                            padding-top: 16px;
+                        }
+
+                        .price {
+                            width: 126px;
+                            height: 20px;
+                            padding-top: 4px;
+                        }
+
+                    }
+                }
+
+            }
+
+        }
+    }
+}
