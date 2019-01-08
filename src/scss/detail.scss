@@ -35,7 +35,7 @@
         height: 100%;
 
         .books_main_l {
-            width: 50%;
+            width: 45%;
             height: 100%;
             float: left;
             padding-top: 30px;
@@ -54,7 +54,7 @@
             .books_litter_p {
                 margin-top: 10px;
                 width: 100%;
-                height: 39px;
+                height: 49px;
                 position: relative;
                 display: flex;
                 justify-content: center;
@@ -65,13 +65,18 @@
 
                     li {
                         width: 60px;
-                        height: 39px;
+                        height: 45px;
                         float: left;
 
                         img {
                             width: 60px;
                             height: 39px;
                         }
+                    }
+
+                    .ac {
+                        border-bottom: 2px solid rgb(155, 153, 153);
+
                     }
                 }
 
@@ -96,9 +101,9 @@
         }
 
         .books_main_r {
-            width: 50%;
+            width: 45%;
             height: 100%;
-            float: left;
+            float: right;
             padding-top: 30px;
 
             h1 {
@@ -120,18 +125,7 @@
                     float: left;
                 }
 
-                .price {
-                    float: left;
 
-                    .marketPrice {
-                        font-size: 16px;
-                    }
-
-                    .current {
-                        font-size: 24px;
-                        color: red;
-                    }
-                }
             }
 
             .colorSelect {
@@ -154,6 +148,10 @@
                         margin-right: 20px;
                         text-align: center;
                         line-height: 39px;
+                    }
+
+                    .ace {
+                        border: 4px solid rgb(131, 122, 122);
                     }
                 }
             }
@@ -186,6 +184,11 @@
                         overflow: hidden;
                         width: 80%;
                     }
+
+                }
+
+                .ace {
+                    border: 4px solid rgb(131, 122, 122);
                 }
             }
 
@@ -195,6 +198,7 @@
                 height: 131px;
                 display: flex;
                 justify-content: center;
+
                 .add_car_btn {
                     display: inline-block;
                     width: 150px;
@@ -212,4 +216,27 @@
             }
         }
     }
+}
+
+.ac {
+    border-bottom: 2px solid rgb(155, 153, 153);
+}
+
+.price {
+    float: left;
+    display: none;
+
+    .marketPrice {
+        font-size: 16px;
+    }
+
+    .current {
+        font-size: 24px;
+        color: red;
+        font-weight: 600;
+    }
+}
+
+.price_block {
+    display: block;
 }
