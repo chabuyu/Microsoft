@@ -1,0 +1,215 @@
+@import "./component/style.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+
+.Global {
+    height: 24px;
+    margin-top: 10px;
+
+    .Global_C {
+        height: 100%;
+        line-height: 24px;
+
+        .Global_Cl {
+            float: left;
+        }
+
+        .fenxiang {
+            float: right;
+
+            img {
+                margin-left: 8px;
+                width: 24px;
+                height: 24px;
+
+            }
+        }
+    }
+}
+
+.books {
+    height: 1288px;
+    padding-top: 10px;
+
+    .books_main {
+        height: 100%;
+
+        .books_main_l {
+            width: 50%;
+            height: 100%;
+            float: left;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .books_big_p {
+                width: 100%;
+
+                img {
+                    float: right;
+                }
+            }
+
+            .books_litter_p {
+                margin-top: 10px;
+                width: 100%;
+                height: 39px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+
+                .books_litter {
+                    position: absolute;
+
+                    li {
+                        width: 60px;
+                        height: 39px;
+                        float: left;
+
+                        img {
+                            width: 60px;
+                            height: 39px;
+                        }
+                    }
+                }
+
+            }
+
+            .books_title {
+                text-align: left;
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 40px;
+            }
+
+            .promotion {
+                background-color: #f6f6f6;
+                padding: 7px;
+                text-align: left;
+                font-size: 14px;
+                line-height: 20px;
+                color: #666;
+                margin-top: 20px;
+            }
+        }
+
+        .books_main_r {
+            width: 50%;
+            height: 100%;
+            float: left;
+            padding-top: 30px;
+
+            h1 {
+                padding: 30px 0 0px;
+            }
+
+            .priceAndRank {
+                width: 100%;
+                height: 80px;
+                line-height: 35px;
+
+                border-bottom: 1px solid #ccc;
+
+                .priceName {
+                    width: 92px;
+                    height: 80px;
+                    text-align: right;
+                    font-size: 14px;
+                    float: left;
+                }
+
+                .price {
+                    float: left;
+
+                    .marketPrice {
+                        font-size: 16px;
+                    }
+
+                    .current {
+                        font-size: 24px;
+                        color: red;
+                    }
+                }
+            }
+
+            .colorSelect {
+                .colorSelectTitle {
+                    font-size: 16px;
+                    padding: 24px 0 2.01680672%;
+                    line-height: 16px;
+                }
+
+                ul {
+                    width: 100%;
+                    height: 51px;
+
+                    li {
+                        border: 1px solid #cccccc;
+                        display: inline-block;
+                        min-width: 94px;
+                        font-size: 14;
+                        height: 39px;
+                        margin-right: 20px;
+                        text-align: center;
+                        line-height: 39px;
+                    }
+                }
+            }
+
+            .select_cutline {
+                width: 100%;
+                height: 180px;
+                border-bottom: 1px solid #ccc;
+
+                .selectTitle {
+                    font-size: 16px;
+                    padding: 24px 0 2.01680672%;
+                    line-height: 16px;
+                }
+
+                .option {
+                    width: 288px;
+                    height: 50px;
+                    margin-right: 12px;
+                    margin-bottom: 10px;
+                    float: left;
+                    border: 1px solid #ccc;
+                    padding-left: 3px;
+                    padding-top: 3px;
+
+                    .optionInner {
+                        height: 100%;
+                        line-height: 14px;
+                        max-height: 50px;
+                        overflow: hidden;
+                        width: 80%;
+                    }
+                }
+            }
+
+            .add_car {
+                padding-top: 25px;
+                width: 100%;
+                height: 131px;
+                display: flex;
+                justify-content: center;
+                .add_car_btn {
+                    display: inline-block;
+                    width: 150px;
+                    height: 35px;
+                    line-height: 35px;
+                    border: none;
+                    text-align: center;
+                    font-size: 14px;
+                    text-decoration: none;
+                    background-color: #da3b01;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

@@ -10,9 +10,9 @@ define(["jquery","cookie"], () => {
 					resolve();
 				})
 			}).then(() => {
-				console.log(1);
+				// console.log(1);
 				var ccc = $.cookie("Microsoft");
-				console.log(ccc);
+				// console.log(ccc);
 				if(ccc){
 					$("#login_one").hide();
 					$("#login_user").show().text(ccc);

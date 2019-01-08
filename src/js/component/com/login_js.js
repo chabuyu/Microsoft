@@ -6,12 +6,12 @@ define(["jquery", "cookie"], () => {
         init() {
             $(function () {
                 var ema = $.cookie("Microsoft");
-                console.log(ema);
+                // console.log(ema);
                 $("#login_email").val(ema);
                 $("#login_next").on("click", function (e) {
                     e.preventDefault()
                     let email = $("#login_email").val();
-                    console.log(email);
+                    // console.log(email);
                     $.ajax({
                         type: "post",
                         url: "http://localhost/www/api/v1/login.php",
@@ -19,7 +19,7 @@ define(["jquery", "cookie"], () => {
                             email: email
                         },
                         success: function (res) {
-                            console.log(res);
+                            // console.log(res);
                             if (res.res_code) {
                                 $(".register").height(320)
                                 $("#register_box").hide();
@@ -27,7 +27,7 @@ define(["jquery", "cookie"], () => {
                                 $("#login_login").on("click",function(e){
                                     e.preventDefault()
                                     var password = $("#login_password").val();
-                                    console.log(password);
+                                    // console.log(password);
                                     $.ajax({
                                         type:"post",
                                         url: "http://localhost/www/api/v1/login_into.php",
@@ -36,7 +36,7 @@ define(["jquery", "cookie"], () => {
                                             password:password
                                         },
                                         success:function(re){
-                                            console.log(re)
+                                            // console.log(re)
                                             if(re.res_code){
                                                 if(rember_me.checked){
                                                         $.cookie("Microsoft", email, {
@@ -52,7 +52,7 @@ define(["jquery", "cookie"], () => {
                                             }
                                         },
                                         error: function (er) {
-                                            console.log(er);
+                                            // console.log(er);
                                         },
                                         dataType: "json"
                                     })
