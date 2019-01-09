@@ -37,7 +37,7 @@ require(["./requirejs.config"], () => {
                         $(e.target).parents('li').addClass("ac").siblings().removeClass("ac");
                     }
                     if (e.target.className === "active") {
-                        $(e.target).addClass('ace').siblings().removeClass('ace')
+                        $(e.target).addClass('ace_size').siblings().removeClass('ace_size')
                         if ($(e.target).text() === "13.5英寸") {
                             $('.price1').addClass('price_block').siblings().removeClass('price_block')
                         } else {
@@ -46,20 +46,26 @@ require(["./requirejs.config"], () => {
                     }
                     if (e.target.className === "add_car_btn") {
                         // size 尺寸;  deploy 配置;  price 价格 图片  id
-                        let size = $(".ace").text();
-                        let price = $('.price_block').find('.current').text();
-                        // let deploy = $('.ace').find('p').text();
-                        let id = arrSearch[1];
+                        let allSize = {};
+                        allSize['size'] = $(".ace_size").text();
+                        let size = $(".ace_size").text();
+                        allSize['price'] = $('.price_block').find('.current').text();
+                        allSize['deploy'] = $('.ace').find('p').text();
+                        allSize['id'] = arrSearch[1];
+                        var all = JSON.stringify(allSize)
                         // console.log(size,deploy,id);
-                        $.cookie('shopping', {
-                            "size": size,
-                            'price': price,
-                            "id": id
-                        }, {
+                        // var b = 'size='+size+',price='+price+',id='+id+',deploy='+deploy
+                        $.cookie("shopping", all
+                            // "size": size,
+                            // 'price': price,
+                            // "id": id
+                        , {
                             expires: 7,
                             path: '/'
                         })
-                        console.log($.cookie('shopping'))
+                        var a = $.cookie("shopping");
+                        console.log(a)
+                        location.href = "http://localhost:2000/html/shopping_car.html";
                     }
                 })
                 $(".option").on("click", function () {
