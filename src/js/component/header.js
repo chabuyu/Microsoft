@@ -18,21 +18,22 @@ define(["jquery", "cookie"], () => {
 					$("#login_user").show().text(ccc);
 				}
 				$(function () {
-					var a = $('header'),
-						b = a.offset(); //返回或设置导航栏相对于文档的偏移(位置)
+					 //返回或设置导航栏相对于文档的偏移(位置)
+					var  header = $('header').offset();
 					//加个屏幕滚动事件，c是滚动条相当于文档最顶端的距离
 					$(document).on('scroll', function () {
-						var c = $(document).scrollTop();
+						var scTop = $(document).scrollTop();
 						//   当滚动的屏幕距离大于等于导航栏本身离最顶端的距离时（判断条件）给它加样式（根据自己业务的条件加样式，一般如下）*／
-						if (b.top < c) {
-							a.css({
+						if (header.top < scTop) {
+							$('header').css({
 								'position': 'fixed',
+								'z-index':'10000',
 								'top': '0px',
-								'left':'7.8%',
+								'left':'8%',
 								'background':"rgb(224, 217, 217)"
 							})
 						} else {
-							a.css({
+							$('header').css({
 								'position': 'relative',
 								'top': '0px',
 								'left':'0px',

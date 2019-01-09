@@ -1,6 +1,7 @@
 @import "./component/style.scss";
 @import "./component/header.scss";
 @import "./component/footer.scss";
+@import "./component/add_btn.scss";
 
 .Global {
     height: 24px;
@@ -198,21 +199,6 @@
                 height: 131px;
                 display: flex;
                 justify-content: center;
-
-                .add_car_btn {
-                    display: inline-block;
-                    width: 150px;
-                    height: 35px;
-                    line-height: 35px;
-                    border: none;
-                    text-align: center;
-                    font-size: 14px;
-                    text-decoration: none;
-                    background-color: #da3b01;
-                    color: #fff;
-                    cursor: pointer;
-                    margin-bottom: 15px;
-                }
             }
         }
     }

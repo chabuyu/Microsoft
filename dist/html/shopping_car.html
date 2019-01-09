@@ -1,1 +1,20 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>购物车</title><link rel="stylesheet" href="../css/shopping_car.css"><script src="/libs/require/require.js" data-main="/js/shopping_car.js"></script></head><body><header></header><footer></footer></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>购物车</title><link rel="stylesheet" href="../css/shopping_car.css"><script src="/libs/require/require.js" data-main="/js/shopping_car.js"></script></head><body><header></header><main class="wrap"><div class="shopping main_wrap"><div class="shopping_wrapper1"><h3 class="shopping_has">购物车内有 <span>0</span> 件商品</h3><div class="shopping_main"><div class="shopping_main_wrap"></div><div class="your_love"><h3>你可能喜欢的</h3><ul id="shopping_your"><script type="text/html" id="shopping_your_love"><li>
+                                <a href="/html/detail.html?id={{ car.data[0].id }}">
+                                    <img class="img" src="{{ car.data[0].img }}" alt="">
+                                    <div class="title">{{ car.data[0].title }}</div>
+                                </a>
+                                <p class="download">{{ car.data[0].download }}</p>
+                                <div class="price">${{ car.data[0].price }}</div>
+                                <div class="add_car"></div>
+                            </li>
+                            <li>
+                                <a href="/html/detail.html?id={{ car.data[1].id }}">
+                                    <img class="img" src="{{ car.data[1].img }}" alt="">
+                                    <div class="title">{{ car.data[1].title }}123</div>
+                                </a>
+                                <p class="download">{{ car.data[1].download }}</p>
+                                <div class="price">${{ car.data[1].price }}</div>
+                                <div class="add_car" id="add_car_btn" >
+
+                                </div>
+                            </li></script></ul></div></div></div><div class="shopping_wrapper2"><div class="clearn"><span>总计</span> <span>￥0</span></div><div class="clearnfix"><button>结算</button></div></div></div></main><footer></footer></body></html>
