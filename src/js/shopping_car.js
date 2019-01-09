@@ -28,7 +28,17 @@ require(["./requirejs.config"], () => {
                 require(["addBtn"], () => {
                     //读取cookie
                     let arr = JSON.parse($.cookie('shopping'))
-                    var str = "";
+                    var str = '<tr>' +
+                    '<td><input type="checkbox" class="check"/>全选</td>' +
+                    '<td>' + "序号"+'</td>' +
+                    '<td><span>' + "配置" + '</span></td>' +
+                    '<td><span>' + "尺寸" + '</span></td>' +
+                    '<td>' + "数量" + '</td>' +
+                    '<td><span>' + "价格" + '</span></td>' +
+                    '<td>' +
+                    '<a href="javascript:;" class="delBtn">全部删除</a>' +
+                    '</td>' +
+                    '</tr>';
                     console.log(arr);
                     //拼接内容
                     var index =1;
@@ -38,9 +48,9 @@ require(["./requirejs.config"], () => {
                         str += '<tr>' +
                             '<td><input type="checkbox" class="check"/></td>' +
                             '<td>' + index++ + '</td>' +
-                            '<td>' + value.id + '</td>' +
                             '<td><span>' + value.deploy + '</span></td>' +
                             '<td><span>' + value.size + '</span></td>' +
+                            '<td>' + value.num + '</td>' +
                             '<td><span>' + value.price + '</span></td>' +
                             '<td>' +
                             '<a href="javascript:;" class="delBtn">删除</a>' +

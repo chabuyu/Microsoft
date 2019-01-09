@@ -5,7 +5,7 @@ require(["./requirejs.config"], () => {
         $(function () {
             var arrSearch;
             new Promise((resolve, reject) => {
-                arrSearch = location.search.slice(1).split("=");
+                var arrSearch = location.search.slice(1).split("=");
                 let objSearch = {}
                 objSearch[arrSearch[0]] = arrSearch[1];
                 $.ajax({
@@ -44,11 +44,6 @@ require(["./requirejs.config"], () => {
                             } else {
                                 $('.price2').addClass('price_block').siblings().removeClass('price_block')
                             }
-                        }
-                        if (e.target.className === "add_car_btn") {
-                            // size 尺寸;  deploy 配置;  price 价格 图片  id
-                            //存cookie
-                            
                         }
                     })
                     $(".option").on("click", function () {

@@ -36,12 +36,15 @@ main {
                     min-height: 100px;
                     width: 100%;
                     tr{
+                        padding-top: 10px;
                         width: 100%;
-                        height: 30px;
+                        min-height: 30px;
                         line-height: 30px;
                         display: flex;
                         justify-content: space-around;
+                        border-bottom: 1px solid red;
                         td{
+                            width: 20%;
                             height: 100%;
                         }
                     }
