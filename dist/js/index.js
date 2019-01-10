@@ -1,1 +1,0 @@
-"use strict";require(["./requirejs.config"],function(){require(["jquery","header","banner","footer"],function(){})});
