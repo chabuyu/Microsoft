@@ -10,16 +10,40 @@ define(["jquery", "cookie"], () => {
 					resolve();
 				})
 			}).then(() => {
-				// console.log(1);
 				var ccc = $.cookie("Microsoft");
-				// console.log(ccc);
 				if (ccc) {
 					$("#login_one").hide();
 					$("#login_user").show().text(ccc);
 				}
 				$(function () {
-					 //返回或设置导航栏相对于文档的偏移(位置)
-					var  header = $('header').offset();
+					$(".seach").on("click", function () {
+						$(".serach,.serach_img").show("slow");
+					})
+					$(".serach").blur(() => {
+						$(".serach,.serach_img,.seach ul").hide();
+					})
+					$(".serach_img").on("click", function () {
+						var str = "wd="
+						str += $(".serach").val()
+						console.log(str)
+						$.getJSON("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=?&" + str, function (res) {
+							var data = res.s;
+							console.log(res)
+							$(".seach ul").empty().show();
+							data.forEach((item, i) => {
+								$("<li>").html(item).appendTo($(".seach ul"));
+							})
+
+						})
+
+						$(".seach ul").on("click", "li", function () {
+							$("input[type=text]").val($(this).text());
+							$(".seach ul").hide();
+						})
+
+					})
+					//返回或设置导航栏相对于文档的偏移(位置)
+					var header = $('header').offset();
 					//加个屏幕滚动事件，c是滚动条相当于文档最顶端的距离
 					$(document).on('scroll', function () {
 						var scTop = $(document).scrollTop();
@@ -27,17 +51,18 @@ define(["jquery", "cookie"], () => {
 						if (header.top < scTop) {
 							$('header').css({
 								'position': 'fixed',
-								'z-index':'10000',
+								'z-index': '10000',
 								'top': '0px',
-								'left':'8%',
-								'background':"rgb(224, 217, 217)"
+								'left': '8%',
+								'background': "#fff",
+								'border-bottom': '1px solid #ccc'
 							})
 						} else {
 							$('header').css({
 								'position': 'relative',
 								'top': '0px',
-								'left':'0px',
-								'background':"#fff"
+								'left': '0px',
+								'background': "#fff"
 							})
 						}
 					})

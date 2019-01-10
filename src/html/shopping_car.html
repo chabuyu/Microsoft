@@ -16,7 +16,7 @@
     <main class="wrap">
         <div class="shopping main_wrap">
             <div class="shopping_wrapper1">
-                <h3 class="shopping_has">购物车内有 <span>0</span> 件商品</h3>
+                <h3 class="shopping_has">购物车内有 <span id="allNum">0</span> 件商品</h3>
                 <div class="shopping_main">
                     <div class="shopping_main_wrap">
 
@@ -25,7 +25,7 @@
                         <h3>你可能喜欢的</h3>
                         <ul id="shopping_your">
                             <script type="text/html" id="shopping_your_love">
-                            <li>
+                                <li>
                                 <a href="/html/detail.html?id={{ car.data[0].id }}">
                                     <img class="img" src="{{ car.data[0].img }}" alt="">
                                     <div class="title">{{ car.data[0].title }}</div>
@@ -42,7 +42,6 @@
                                 <p class="download">{{ car.data[1].download }}</p>
                                 <div class="price">${{ car.data[1].price }}</div>
                                 <div class="add_car" id="add_car_btn" >
-
                                 </div>
                             </li>
                             </script>
@@ -53,10 +52,10 @@
             <div class="shopping_wrapper2">
                 <div class="clearn">
                     <span>总计</span>
-                    <span>￥0</span>
+                    <span id="allPrice">￥0</span>
                 </div>
                 <div class="clearnfix">
-                    <button>结算</button>
+                    <button id="settle">结算</button>
                 </div>
             </div>
         </div>

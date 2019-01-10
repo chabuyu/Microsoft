@@ -22,7 +22,7 @@ define(["jquery", "cookie"], () => {
 						//尺寸
 						all['size'] = $(".ace_size").text();
 						//价格
-						all['price'] = $('.price_block').find('.current').text();
+						all['price'] = ($('.price_block').find('.current').text()).slice(1);
 						//配置
 						all['deploy'] = $('.ace').find('p').text();
 						//编号
@@ -45,9 +45,7 @@ define(["jquery", "cookie"], () => {
 							expires: 7,
 							path: '/'
 						})
-						var a = $.cookie("shopping");
-						console.log(a)
-						// location.href = "http://localhost:2000/html/shopping_car.html";
+						location.href = "http://localhost:2000/html/shopping_car.html";
 					})
 				})
 			})
