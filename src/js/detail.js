@@ -18,12 +18,9 @@ require(["./requirejs.config"], () => {
                         if (res.res_code === 1) {
                             let detail = res.res_body;
                             //通过模板引擎渲染结构
-                            // console.log(detail);
                             let html = template("detail_template", {
                                 detail: detail
                             });
-                            // console.log(detail.title)
-                            // console.log(html);
                             $("#books").html(html);
                             resolve();
                         }

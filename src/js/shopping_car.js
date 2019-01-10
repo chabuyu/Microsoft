@@ -92,13 +92,11 @@ require(["./requirejs.config"], () => {
                                         path: '/'
                                     })
                                     tr.parentNode.removeChild(tr);
-                                    location.reload();
+                                    // location.reload();
                                 }
                             } else if (e.target.className === "allDelBtn") {
                                 //全部删除
-                                console.log(1)
                                 if (confirm("确定清空购车车？")) {
-                                    console.log(this);
                                     this.remove(this);
                                     //清空cookie
                                     $.cookie("shopping", "", {
@@ -116,14 +114,17 @@ require(["./requirejs.config"], () => {
                             function allPrice() {
                                 var sum = 0;
                                 //找到被选中的那些行，然后把这些行的单价X数量，累加
-                                for (let j = 0; j < aCheck.length; j++) {
-                                    if (aCheck[j].checked) {
-                                        var price = arr[j].price;
-                                        var num = arr[j].num;
-                                        sum += price * num;
+                                if ($.cookie('shopping')) {
+                                    for (let j = 0; j < aCheck.length; j++) {
+                                        if (aCheck[j].checked) {
+                                            var price = arr[j].price;
+                                            var num = arr[j].num;
+                                            sum += price * num;
+                                        }
                                     }
+                                    $("#allPrice").text('￥' + sum);
                                 }
-                                $("#allPrice").text('￥' + sum);
+
                             }
                             allPrice();
                         });
@@ -155,7 +156,6 @@ require(["./requirejs.config"], () => {
                                     location.href = "/html/component/register.html"
                                 }
                             }
-
                         })
 
                     }
