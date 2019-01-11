@@ -56,16 +56,22 @@ define(["jquery", "cookie"], () => {
 								'left': '8%',
 								'background': "#fff",
 								'border-bottom': '1px solid #ccc'
-							})
+							}).next().css({'margin-top' : '100px'})
 						} else {
 							$('header').css({
 								'position': 'relative',
 								'top': '0px',
 								'left': '0px',
-								'background': "#fff"
+								'background': "#fff",
+								'border-bottom': 'none'
 							})
 						}
 					})
+					if($.cookie("allNum")){
+						console.log($.cookie("allNum"))
+						$(".shopping-car-amount").show().text($.cookie("allNum"))
+					}
+					
 				});
 			})
 		}

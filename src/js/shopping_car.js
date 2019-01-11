@@ -54,6 +54,14 @@ require(["./requirejs.config"], () => {
                             allNum += value.num;
                         }
                         $("#allNum").text(allNum);
+                        //计算数量
+                        function All_num () {
+                            $.cookie("allNum", allNum, {    
+                                expires: 7,
+                                path: '/'
+                            });
+                        }
+                        All_num()
                         var tr;
                         $(".shopping_main_wrap").html(str).on('click', function (e) {
                             //找到所有单选按钮
@@ -72,7 +80,7 @@ require(["./requirejs.config"], () => {
                                 //n的值也要修改
                                 n = allCheck.prop('checked') ? aCheck.length : 0;
                                 console.log($("check:checked"))
-
+                                All_num()
                             } else if (e.target.className === "check") { //单选按钮事件
                                 e.target.checked ? n++ : n--;
                                 if (n === aCheck.length) {
@@ -92,6 +100,7 @@ require(["./requirejs.config"], () => {
                                         path: '/'
                                     })
                                     tr.parentNode.removeChild(tr);
+                                    All_num()
                                     // location.reload();
                                 }
                             } else if (e.target.className === "allDelBtn") {
@@ -105,6 +114,8 @@ require(["./requirejs.config"], () => {
                                     });
                                     //重载页面
                                     location.reload();
+                                    All_num()
+
                                 }
                             } else if (e.target.id === "settle") { //结算 按钮
                                 // console.log(1)
@@ -128,6 +139,7 @@ require(["./requirejs.config"], () => {
                             }
                             allPrice();
                         });
+                        $(".shopping_wrapper2").removeClass("settle");
                         $("#settle").on("click", function () {
                             // console.log(1)
                             if (n > 0) {
@@ -150,6 +162,7 @@ require(["./requirejs.config"], () => {
 
                                         }
                                         $(".shopping_wrapper2").addClass("settle");
+                                        $.cookie
                                     }
                                 } else {
                                     alert("请登录")

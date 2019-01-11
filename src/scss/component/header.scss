@@ -177,8 +177,15 @@ nav .nav_left li:hover a span{
     display: none;
     position: absolute;
     color: red;
-    top: -7px;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    top: 5px;
     right: 3px;
+    border-radius: 50%;
+    background: rgb(194, 194, 194);
+    opacity: 0.5;
+    font-weight: 600
 }
 .nav_wrap .login{
     width: 66px;
